@@ -64,19 +64,22 @@ const Main = () => {
             name='region'
             className='px-8 py-4 focus:outline-none rounded-md shadow-md w-[50%] md:w-full font-sans dark:bg-gray-700 dark:text-white'
             onChange={getFilteredOpt}
+            required
           >
-            <option value='filter' disabled selected>Filter by Region</option>
+            <optgroup label='Countries' className='text-lg'>
+            <option value='' disabled selected>Filter by Region</option>
             <option value='africa'>Africa</option>
             <option value='americas'>America</option>
             <option value='asia'>Asia</option>
             <option value='europe'>Europe</option>
             <option value='oceania'>Oceania</option>
+            </optgroup>
           </select>
         </div>
       </div>
 
       {/* Countries Card */}
-      <div className='grid grid-cols-1 space-y-8 md:grid-cols-3 lg:grid-cols-4 md:space-y-8'>
+      <div className='grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-y-8 gap-x-4 mx-2'>
         {search.map((item) => (
           <Link to={`/details/${item.cca3}`} key={item.cca3}>
             <div className='mx-auto max-w-xs shadow-lg rounded-md pb-16 bg-white dark:bg-gray-800'>

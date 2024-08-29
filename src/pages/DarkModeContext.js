@@ -10,6 +10,7 @@ export const DarkModeProvider = ({ children }) => {
     return savedDarkMode === 'true';
   });
 
+
   useEffect(() => {
     if (dark) {
       document.body.classList.add("dark");

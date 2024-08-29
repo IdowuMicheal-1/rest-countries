@@ -98,7 +98,7 @@ const Details = () => {
               <div className='flex space-x-4 mt-5 pb-16'>
                 {details.borders && details.borders.length > 0 ? (
                   details.borders.map((border) => (
-                    <button key={border} className='bg-white dark:bg-gray-700 dark:text-white py-1 px-4 rounded-md shadow-md'>
+                    <button key={border} className='bg-white dark:bg-gray-700 dark:text-white py-1 px-4 rounded-md shadow-md max-w-12 flex justify-center items-center'>
                       {border}
                     </button>
                   ))
